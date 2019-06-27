@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    boots: [
+    notebooks: [
       {
         name: 'Timberland',
         price: 2259,
@@ -82,6 +82,9 @@ export default new Vuex.Store({
         details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
       },
     ],
+  },
+  getters: {
+    getAllProducts: state => state.notebooks.concat(state.smartphones),
   },
   mutations: {
 
